@@ -1,0 +1,30 @@
+{
+	"extends": "expo/tsconfig.base",
+	"compilerOptions": {
+		"strict": true,
+
+		"baseUrl": ".",
+		"paths": {
+			"@api/*": ["./src/api/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@components/*": ["./src/components/*"],
+			"@configs/*": ["./src/configs/*"],
+			"@constants/*": ["./src/constants/*"],
+			"@contexts/*": ["./src/contexts/*"],
+			"@env/*": ["./src/env/*"],
+			"@errors/*": ["./src/errors/*"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@interfaces/*": ["./src/interfaces/*"],
+			"@mutations/*": ["./src/mutations/*"],
+			"@pages/*": ["./src/pages/*"],
+			"@queries/*": ["./src/queries/*"],
+			"@routes/*": ["./src/routes/*"],
+			"@services/*": ["./src/services/*"],
+			"@styles/*": ["./src/styles/*"],
+			"@utils/*": ["./src/utils/*"],
+			"@validations/*": ["./src/validations/*"],
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+}
