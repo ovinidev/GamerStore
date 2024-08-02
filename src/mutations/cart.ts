@@ -1,4 +1,4 @@
-import { addToCartFromApi, deleteCartFromApi } from "@api/cart";
+import { addToCartFromStorage, deleteCartFromStorage } from "@api/cart";
 import { CARTS } from "@constants/entities";
 import { useToast } from "@hooks/useToast";
 import { Game } from "@interfaces/games";
@@ -9,7 +9,7 @@ export const useAddCart = () => {
 	const { handleShowToastMessage } = useToast();
 
 	return useMutation({
-		mutationFn: (data: Game) => addToCartFromApi(data),
+		mutationFn: (data: Game) => addToCartFromStorage(data),
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: [CARTS] });
 			handleShowToastMessage({
@@ -18,7 +18,7 @@ export const useAddCart = () => {
 			});
 		},
 		// TODO: any
-		onError: (_err: any) => {
+		onError: () => {
 			handleShowToastMessage({
 				type: "error",
 				text: "Houve um erro ao adicionar o item",
@@ -31,7 +31,7 @@ export const useDeleteCart = () => {
 	const { handleShowToastMessage } = useToast();
 
 	return useMutation({
-		mutationFn: (id: number) => deleteCartFromApi(id),
+		mutationFn: (id: number) => deleteCartFromStorage(id),
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: [CARTS] });
 			handleShowToastMessage({
@@ -39,7 +39,7 @@ export const useDeleteCart = () => {
 				text: "Item removido do carrinho som sucesso",
 			});
 		},
-		onError: (_err: any) => {
+		onError: () => {
 			handleShowToastMessage({
 				type: "error",
 				text: "Houve um erro ao deletar o item",

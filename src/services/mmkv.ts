@@ -4,14 +4,14 @@ import { MMKV } from "react-native-mmkv";
 export const storage = new MMKV();
 
 export const clientStorage = {
-	setItem: (key, value) => {
-		storage.set(key, value);
+	setItem: (key: string, value: any) => {
+		storage.set(key, JSON.stringify(value));
 	},
-	getItem: (key) => {
+	getItem: (key: string) => {
 		const value = storage.getString(key);
 		return value === undefined ? null : value;
 	},
-	removeItem: (key) => {
+	removeItem: (key: string) => {
 		storage.delete(key);
 	},
 };

@@ -1,6 +1,7 @@
 import { Button } from "@components/Button";
 import { useCart } from "@hooks/useCart";
 import { Game } from "@interfaces/games";
+import { handleNavigate } from "@utils/handleNavigate";
 import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity } from "react-native";
 
@@ -22,23 +23,10 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 		addToCart(data);
 	};
 
-	const handleNavigate = (id: number) => {
-		router.push(`/${id}`);
-		router.setParams({
-			id: data.id,
-			title: data.title,
-			platform: data.platform,
-			image: data.image,
-			genre: data.genre,
-			release_date: data.release_date,
-			price: data.price,
-		});
-	};
-
 	return (
 		<TouchableOpacity
 			className="m-2 w-[165] bg-slate-900"
-			onPress={() => handleNavigate(data.id)}
+			onPress={() => handleNavigate({ id: data.id, router })}
 		>
 			<Image
 				className="h-[165] w-full"
