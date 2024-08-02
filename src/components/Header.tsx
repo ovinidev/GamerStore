@@ -20,7 +20,7 @@ export const Header = ({ title }: HeaderProps) => {
 			options={{
 				title,
 				headerRight: () => (
-					<View className="relative">
+					<View className="relative flex items-center justify-center">
 						<Feather
 							onPress={handleNavigate}
 							name="shopping-cart"
@@ -28,7 +28,7 @@ export const Header = ({ title }: HeaderProps) => {
 							color="white"
 						/>
 						{data && data.carts.length > 0 && (
-							<Text className="absolute top-[-13px] right-[-6px] font-bold text-md text-white">
+							<Text className="absolute top-[-14px] right-[-5px] font-bold text-md text-slate-100">
 								{data?.carts.length}
 							</Text>
 						)}
