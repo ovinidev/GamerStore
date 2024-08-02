@@ -1,27 +1,31 @@
 import { CART_STORAGE_KEY } from "@constants/storageKey";
 import { Game } from "@interfaces/games";
-import { storage } from "@services/mmkv";
+import { clientStorage } from "@services/mmkv";
 
-export const getCarts = () => {
-	const carts = storage.getString(CART_STORAGE_KEY);
+export const getCartFromApi = (): Game[] => {
+	const cart = clientStorage.getItem(CART_STORAGE_KEY);
 
-	return carts ? carts : [];
+	return cart ? (JSON.parse(cart) as unknown as Game[]) : [];
 };
 
-export const addCarts = async (game: Game) => {
-	const carts = storage.getString(CART_STORAGE_KEY);
+export const addToCartFromApi = async (game: Game) => {
+	const cart = getCartFromApi();
 
-	const newCarts = carts && [...carts, game];
+	const gameAlreadyInCart = cart.find((cart) => cart.id === game.id);
 
-	storage.set(CART_STORAGE_KEY, JSON.stringify(newCarts));
+	if (gameAlreadyInCart) throw new Error("The game already exist");
+
+	const cartParsed = cart ? cart : [];
+
+	const newCart = [...cartParsed, game];
+
+	clientStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
 };
 
-export const deleteCart = async (id: number) => {
-	const carts = storage.getString(CART_STORAGE_KEY);
+export const deleteCartFromApi = async (id: number) => {
+	const cart = getCartFromApi();
 
-	const cartsInJson: Game[] = carts && JSON.parse(carts);
+	const newCarts = cart.filter((cart) => cart.id !== id);
 
-	const newCarts = cartsInJson.filter((cart) => cart.id !== id);
-
-	storage.set(CART_STORAGE_KEY, JSON.stringify(newCarts));
+	clientStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCarts));
 };

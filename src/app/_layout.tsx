@@ -1,11 +1,15 @@
-import { QueryClientProvider } from "@tanstack/react-query";
 import "../styles/global.css";
 import { Stack } from "expo-router";
 import { queryClient } from "@services/queryClient";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import { clientPersister } from "@services/mmkv";
 
 export default function Layout() {
 	return (
-		<QueryClientProvider client={queryClient}>
+		<PersistQueryClientProvider
+			client={queryClient}
+			persistOptions={{ persister: clientPersister }}
+		>
 			<Stack
 				screenOptions={{
 					headerStyle: {
@@ -17,6 +21,6 @@ export default function Layout() {
 					},
 				}}
 			/>
-		</QueryClientProvider>
+		</PersistQueryClientProvider>
 	);
 }

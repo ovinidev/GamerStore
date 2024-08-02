@@ -6,4 +6,5 @@ export interface Game {
 	release_date: string;
 	image: string;
 	price: number;
+	description: string;
 }

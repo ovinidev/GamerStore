@@ -2,7 +2,7 @@ import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity } from "react-native";
 import { Button } from "@components/Button";
 import { Game } from "@interfaces/games";
-import { useAddCart, useDeleteCart } from "@mutations/cart";
+import { useCart } from "@hooks/useCart";
 
 interface GameItemProps {
 	data: Game;
@@ -11,21 +11,21 @@ interface GameItemProps {
 
 export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 	const router = useRouter();
-	const { mutateAsync: addCart } = useAddCart();
-	const { mutateAsync: deleteCart } = useDeleteCart();
+	const { addToCart, deleteFromCart } = useCart();
 
 	const handleUpdateCart = () => {
 		if (isInTheCart) {
-			deleteCart(data.id);
+			deleteFromCart(data.id);
 			return;
 		}
 
-		addCart(data);
+		addToCart(data);
 	};
 
 	const handleNavigate = (id: number) => {
 		router.push(`/${id}`);
 		router.setParams({
+			id: data.id,
 			title: data.title,
 			platform: data.platform,
 			image: data.image,
