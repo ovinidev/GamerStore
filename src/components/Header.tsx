@@ -15,7 +15,10 @@ export const Header = () => {
 		<Stack.Screen
 			options={{
 				headerTitle: () => (
-					<Image source={require("../assets/logo.png")} resizeMode="contain" />
+					<Image
+						source={require("../../assets/logo.png")}
+						resizeMode="contain"
+					/>
 				),
 				headerRight: () => (
 					<View className="relative flex items-center justify-center">
