@@ -1,7 +1,7 @@
-import { Text, View } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
 import { useCart } from "@hooks/useCart";
 import { Game } from "@interfaces/games";
+import { Text, View } from "react-native";
 
 interface CartItemProps {
 	data: Game;
@@ -11,7 +11,7 @@ export const CartItem = ({ data }: CartItemProps) => {
 	const { deleteFromCart } = useCart();
 
 	return (
-		<View className="flex w-full flex-row items-center justify-between rounded-md bg-slate-900 p-3">
+		<View className="flex w-full flex-row items-center justify-between rounded-md bg-slate-900 p-2">
 			{/* TODO: Colocar imagem do item */}
 
 			<View className="flex gap-2">

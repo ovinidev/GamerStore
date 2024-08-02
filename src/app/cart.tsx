@@ -1,7 +1,7 @@
-import { FlatList, Text, View } from "react-native";
+import { CartItem } from "@components/CartItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
-import { CartItem } from "@components/CartItem";
+import { FlatList, Text, View } from "react-native";
 
 export default function Cart() {
 	const { data } = useCart();

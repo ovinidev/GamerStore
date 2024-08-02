@@ -1,8 +1,8 @@
+import { Button } from "@components/Button";
+import { useCart } from "@hooks/useCart";
+import { Game } from "@interfaces/games";
 import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity } from "react-native";
-import { Button } from "@components/Button";
-import { Game } from "@interfaces/games";
-import { useCart } from "@hooks/useCart";
 
 interface GameItemProps {
 	data: Game;

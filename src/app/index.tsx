@@ -1,9 +1,9 @@
-import { FlatList, View } from "react-native";
-import { useGames } from "@queries/games";
 import { GameItem } from "@components/GameItem";
-import { Game } from "@interfaces/games";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
+import { Game } from "@interfaces/games";
+import { useGames } from "@queries/games";
+import { FlatList, View } from "react-native";
 
 export default function Home() {
 	const { data: games } = useGames();

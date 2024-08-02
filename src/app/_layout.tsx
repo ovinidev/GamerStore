@@ -1,8 +1,8 @@
 import "../styles/global.css";
-import { Stack } from "expo-router";
+import { clientPersister } from "@services/mmkv";
 import { queryClient } from "@services/queryClient";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
-import { clientPersister } from "@services/mmkv";
+import { Stack } from "expo-router";
 import Toast from "react-native-toast-message";
 
 export default function Layout() {

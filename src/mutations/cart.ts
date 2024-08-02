@@ -18,7 +18,7 @@ export const useAddCart = () => {
 			});
 		},
 		// TODO: any
-		onError: (err: any) => {
+		onError: (_err: any) => {
 			handleShowToastMessage({
 				type: "error",
 				text: "Houve um erro ao adicionar o item",
@@ -39,7 +39,7 @@ export const useDeleteCart = () => {
 				text: "Item removido do carrinho som sucesso",
 			});
 		},
-		onError: (err: any) => {
+		onError: (_err: any) => {
 			handleShowToastMessage({
 				type: "error",
 				text: "Houve um erro ao deletar o item",

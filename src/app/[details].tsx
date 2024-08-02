@@ -1,10 +1,10 @@
-import { useLocalSearchParams } from "expo-router";
-import { FlatList, Image, Text, View } from "react-native";
 import { Button } from "@components/Button";
+import { DetailsItem } from "@components/DetailsItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
 import { useGameById } from "@queries/games";
-import { DetailsItem } from "@components/DetailsItem";
+import { useLocalSearchParams } from "expo-router";
+import { FlatList, Image, Text, View } from "react-native";
 
 export default function Details() {
 	const params = useLocalSearchParams();

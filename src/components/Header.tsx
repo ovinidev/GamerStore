@@ -1,7 +1,7 @@
-import { Stack, useRouter } from "expo-router";
 import Feather from "@expo/vector-icons/Feather";
-import { Text, View } from "react-native";
 import { useCart } from "@hooks/useCart";
+import { Stack, useRouter } from "expo-router";
+import { Text, View } from "react-native";
 
 interface HeaderProps {
 	title: string;

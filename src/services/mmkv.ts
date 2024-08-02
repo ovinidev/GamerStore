@@ -1,5 +1,5 @@
-import { MMKV } from "react-native-mmkv";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
+import { MMKV } from "react-native-mmkv";
 
 export const storage = new MMKV();
 
