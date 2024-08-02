@@ -29,13 +29,21 @@ export default function Details() {
 		addToCart(game);
 	};
 
+	const dateFormattedToBrazilianFormat = game?.release_date
+		? new Date(game.release_date).toLocaleDateString("pt-BR")
+		: "";
+
 	return (
 		<View className="flex flex-1 items-start gap-2 bg-slate-950 px-6">
-			<Header title={game?.title ? game?.title : ""} />
+			<Header />
+
+			<Text className="my-2 self-center font-bold text-3xl text-slate-50">
+				{game?.title}
+			</Text>
 
 			{game?.image && (
 				<Image
-					className="mt-4 h-[300] w-full"
+					className="h-[300] w-full"
 					source={{ uri: game.image }}
 					resizeMode="cover"
 				/>
@@ -48,10 +56,7 @@ export default function Details() {
 				value={game?.platform ? game.platform : ""}
 			/>
 			<DetailsItem label="Preço" value={game?.price ? `R$${game.price}` : ""} />
-			<DetailsItem
-				label="Lançamento"
-				value={game?.release_date ? game.release_date : ""}
-			/>
+			<DetailsItem label="Lançamento" value={dateFormattedToBrazilianFormat} />
 
 			<Button onPress={() => handleUpdateCart(Number(params.id))}>
 				{isInTheCart ? "Remover do carrinho" : "Adicionar ao carrinho"}

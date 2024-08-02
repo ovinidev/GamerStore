@@ -1,13 +1,9 @@
 import Feather from "@expo/vector-icons/Feather";
 import { useCart } from "@hooks/useCart";
 import { Stack, useRouter } from "expo-router";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
-interface HeaderProps {
-	title: string;
-}
-
-export const Header = ({ title }: HeaderProps) => {
+export const Header = () => {
 	const router = useRouter();
 	const { data } = useCart();
 
@@ -18,7 +14,9 @@ export const Header = ({ title }: HeaderProps) => {
 	return (
 		<Stack.Screen
 			options={{
-				title,
+				headerTitle: () => (
+					<Image source={require("../assets/logo.png")} resizeMode="contain" />
+				),
 				headerRight: () => (
 					<View className="relative flex items-center justify-center">
 						<Feather

@@ -9,7 +9,7 @@ export default function Cart() {
 
 	return (
 		<View className="flex-1 bg-slate-950 p-6">
-			<Header title="Carrinho" />
+			<Header />
 
 			{isCartEmpty && (
 				<Text className="self-start font-normal text-slate-100 text-xl">

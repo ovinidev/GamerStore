@@ -17,9 +17,7 @@ export default function Layout() {
 						backgroundColor: "#EB3678",
 					},
 					headerTintColor: "#fff",
-					headerTitleStyle: {
-						fontWeight: "bold",
-					},
+					headerTitleAlign: "center",
 				}}
 			/>
 

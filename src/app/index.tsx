@@ -21,7 +21,7 @@ export default function Home() {
 
 	return (
 		<View className="flex flex-1 items-center bg-slate-950">
-			<Header title="Game Store" />
+			<Header />
 
 			<FlatList
 				data={games}
