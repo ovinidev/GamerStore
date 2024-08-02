@@ -11,22 +11,23 @@ export const CartItem = ({ data }: CartItemProps) => {
 	const { deleteFromCart } = useCart();
 
 	return (
-		<View className="flex w-full items-center gap-2 self-center border-2 border-slate-100 p-2">
-			<View className="flex w-full flex-row items-center justify-between">
+		<View className="flex w-full flex-row items-center justify-between rounded-md bg-slate-900 p-3">
+			{/* TODO: Colocar imagem do item */}
+
+			<View className="flex gap-2">
 				<Text className="text-slate-50 text-xl">{data.title}</Text>
 
-				<Feather
-					onPress={() => deleteFromCart(data.id)}
-					name="trash"
-					size={24}
-					color="white"
-					className="mr-2"
-				/>
+				<Text className="self-start font-semibold text-slate-100 text-xl">
+					R$ {data.price}
+				</Text>
 			</View>
 
-			<Text className="self-start font-semibold text-2xl text-slate-100">
-				R$ {data.price}
-			</Text>
+			<Feather
+				onPress={() => deleteFromCart(data.id)}
+				name="trash"
+				size={24}
+				color="white"
+			/>
 		</View>
 	);
 };
