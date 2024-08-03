@@ -26,6 +26,10 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 	return (
 		<TouchableOpacity
 			className="m-2 w-[165] bg-slate-900"
+			accessibilityRole="button"
+			accessibilityLabel={
+				isInTheCart ? "Remover do carrinho" : "Adicionar ao carrinho"
+			}
 			onPress={() => handleNavigate({ id: data.id, router })}
 		>
 			<Image
