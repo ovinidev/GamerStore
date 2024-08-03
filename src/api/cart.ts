@@ -2,7 +2,6 @@ import { CART_STORAGE_KEY } from "@constants/storageKey";
 import { Game } from "@interfaces/games";
 import { clientStorage } from "@services/mmkv";
 
-// TODO: Tratamento de erros
 export const getCartFromStorage = (): Game[] => {
 	const cart = clientStorage.getItem(CART_STORAGE_KEY);
 

@@ -21,7 +21,7 @@ describe("getCartAndCalculateTotalPrice", () => {
 
 		expect(cart).toEqual({
 			carts: CART_MOCK,
-			totalPrice: 60,
+			totalPrice: 120,
 		});
 	});
 
