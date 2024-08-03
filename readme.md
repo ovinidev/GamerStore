@@ -4,6 +4,9 @@ Este é um app de venda de jogos digitais, desenvolvido com Expo e React Native.
 
 ## Tecnologias Utilizadas
 
+<div style="text-align: center;">
+  <img height="150px" src="https://i.imgur.com/y0J4S7N.png" />
+</div>
 Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 
 - **React Native**: Biblioteca javascript para criar aplicativos móveis nativos usando React.
@@ -38,6 +41,12 @@ O aplicativo possui as seguintes funcionalidades:
   - Exibe todos os jogos adicionados ao carrinho.
   - Mostra o valor total do carrinho.
   - Permite remover itens individuais do carrinho.
+
+<div style="text-align: center;">
+  <img height="500px" src="https://i.imgur.com/DIHv6Cl.png" style="display: block; margin: 0 auto;" />
+  <img height="500px" src="https://i.imgur.com/0dWNg6w.png" style="display: block; margin: 5 auto;" />
+  <img height="500px" src="https://i.imgur.com/HjDP8PT.png" style="display: block; margin: 0 auto;" />
+</div>
 
 ## Como Executar o Projeto
 
