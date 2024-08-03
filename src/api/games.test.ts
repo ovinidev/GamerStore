@@ -4,7 +4,7 @@ import { GAMES_MOCK } from "@constants/mock";
 
 jest.mock("axios");
 
-const axiosMock = axios as jest.Mocked<typeof axios>;
+const axiosMocked = axios as jest.Mocked<typeof axios>;
 
 describe("Games Api", () => {
 	const mockAxiosInstance = {
@@ -12,8 +12,8 @@ describe("Games Api", () => {
 	} as unknown as AxiosInstance;
 
 	beforeEach(() => {
-		axiosMock.create.mockClear();
-		axiosMock.get.mockClear();
+		axiosMocked.create.mockClear();
+		axiosMocked.get.mockClear();
 	});
 
 	it("should be able to fetch and return games data", async () => {

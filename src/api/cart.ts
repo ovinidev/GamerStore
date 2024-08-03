@@ -25,6 +25,10 @@ export const addToCartFromStorage = async (game: Game) => {
 export const deleteCartFromStorage = async (id: number) => {
 	const cart = getCartFromStorage();
 
+	const isCartItemExists = cart.find((cart) => cart.id === id);
+
+	if (!isCartItemExists) throw new Error("Cart item not exists");
+
 	const newCarts = cart.filter((cart) => cart.id !== id);
 
 	clientStorage.setItem(CART_STORAGE_KEY, newCarts);

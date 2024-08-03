@@ -17,7 +17,6 @@ export const useAddCart = () => {
 				text: "Item adicionado ao carrinho som sucesso",
 			});
 		},
-		// TODO: any
 		onError: () => {
 			handleShowToastMessage({
 				type: "error",
