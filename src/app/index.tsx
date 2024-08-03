@@ -1,7 +1,6 @@
 import { GameItem } from "@components/GameItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
-import { Game } from "@interfaces/games";
 import { useGames } from "@queries/games";
 import { verifyItemInCart } from "@utils/verifyItemInCart";
 import { FlatList, View } from "react-native";
