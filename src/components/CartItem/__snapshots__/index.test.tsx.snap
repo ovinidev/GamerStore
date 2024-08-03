@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem should be able to match the snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    className="flex flex-row items-center gap-3"
+  >
+    <Image
+      height={65}
+      source={
+        {
+          "uri": "image-url",
+        }
+      }
+      width={65}
+    />
+    <View
+      className="flex gap-2"
+    >
+      <Text
+        className="text-slate-50 text-xl"
+      >
+        Game Beta
+      </Text>
+      <Text
+        className="self-start font-semibold text-slate-100 text-xl"
+      >
+        R$ 
+        60
+      </Text>
+    </View>
+  </View>
+  <Feather
+    className="mr-1"
+    color="white"
+    name="trash"
+    onPress={[Function]}
+    size={24}
+  />
+</View>
+`;
+
+exports[`CartItem should match the snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    className="flex flex-row items-center gap-3"
+  >
+    <Image
+      height={65}
+      source={
+        {
+          "uri": "image-url",
+        }
+      }
+      width={65}
+    />
+    <View
+      className="flex gap-2"
+    >
+      <Text
+        className="text-slate-50 text-xl"
+      >
+        Game Beta
+      </Text>
+      <Text
+        className="self-start font-semibold text-slate-100 text-xl"
+      >
+        R$ 
+        60
+      </Text>
+    </View>
+  </View>
+  <Feather
+    className="mr-1"
+    color="white"
+    name="trash"
+    onPress={[Function]}
+    size={24}
+  />
+</View>
+`;

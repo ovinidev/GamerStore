@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsItem should be able to match the snapshot 1`] = `
+<View
+  className="w-full"
+>
+  <View
+    className="flex flex-row gap-2"
+  >
+    <Text
+      className="font-semibold text-slate-100 text-xl"
+    >
+      Title
+      :
+    </Text>
+    <Text
+      className=" text-slate-100 text-xl"
+    >
+      Test
+    </Text>
+  </View>
+</View>
+`;

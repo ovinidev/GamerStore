@@ -54,13 +54,14 @@
 	},
 	"expo": {
 		"install": {
-			"exclude": [
-				"react-native-safe-area-context"
-			]
+			"exclude": ["react-native-safe-area-context"]
 		}
 	},
 	"jest": {
-		"preset": "jest-expo"
+		"preset": "jest-expo",
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|webp)$": "<rootDir>/src/__mocks__/fileMock.ts"
+		}
 	},
 	"private": true
 }

@@ -15,12 +15,9 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 	const { addToCart, deleteFromCart } = useCart();
 
 	const handleUpdateCart = () => {
-		if (isInTheCart) {
-			deleteFromCart(data.id);
-			return;
-		}
+		if (!data) return;
 
-		addToCart(data);
+		isInTheCart ? deleteFromCart(data.id) : addToCart(data);
 	};
 
 	return (

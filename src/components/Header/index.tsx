@@ -16,7 +16,7 @@ export const Header = () => {
 			options={{
 				headerTitle: () => (
 					<Image
-						source={require("../../assets/logo.png")}
+						source={require("../../../assets/logo.png")}
 						resizeMode="contain"
 					/>
 				),

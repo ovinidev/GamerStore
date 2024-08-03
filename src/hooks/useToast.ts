@@ -11,6 +11,7 @@ export const useToast = () => {
 			type,
 			text1: text,
 			position: "bottom",
+			visibilityTime: 1500,
 		});
 	};
 
