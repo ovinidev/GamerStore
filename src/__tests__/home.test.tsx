@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 import Home from "../app/index";
 import { useGames } from "@queries/games";
-import { CART_MOCK, GAMES_MOCK } from "@constants/mock";
+import { GAMES_MOCK } from "@constants/mock";
 
 jest.mock("expo-router", () => ({
 	Stack: {

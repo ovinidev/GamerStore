@@ -1,33 +1,47 @@
 {
-	"expo": {
-		"name": "game-store",
-		"slug": "game-store",
-		"version": "1.0.0",
-		"scheme": "game-store",
-		"plugins": [["expo-router"]],
-		"experiments": {
-			"typedRoutes": true,
-			"tsconfigPaths": true
-		},
-		"orientation": "portrait",
-		"icon": "./assets/icon.png",
-		"userInterfaceStyle": "light",
-		"splash": {
-			"image": "./assets/splash.png",
-			"resizeMode": "contain",
-			"backgroundColor": "#140449"
-		},
-		"assetBundlePatterns": ["**/*"],
-		"ios": {
-			"supportsTablet": true,
-			"bundleIdentifier": "com.anonymous.gamestore"
-		},
-		"android": {
-			"adaptiveIcon": {
-				"foregroundImage": "./assets/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
-			},
-			"package": "com.anonymous.gamestore"
-		}
-	}
+  "expo": {
+    "name": "game-store",
+    "slug": "game-store",
+    "version": "1.0.0",
+    "scheme": "game-store",
+    "plugins": [
+      [
+        "expo-router"
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#140449"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.gamestore"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.gamestore"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7e4bc098-3604-4505-a2eb-6608ab14c3ad"
+      }
+    }
+  }
 }

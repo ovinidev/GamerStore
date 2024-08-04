@@ -8,6 +8,10 @@ export const getCartFromStorage = (): Game[] => {
 	return cart ? (JSON.parse(cart) as unknown as Game[]) : [];
 };
 
+const updateCart = (cart: Game[]) => {
+	clientStorage.setItem(CART_STORAGE_KEY, cart);
+};
+
 export const addToCartFromStorage = async (game: Game) => {
 	const cart = getCartFromStorage();
 
@@ -15,11 +19,9 @@ export const addToCartFromStorage = async (game: Game) => {
 
 	if (gameAlreadyInCart) throw new Error("The game already exist");
 
-	const cartParsed = cart ? cart : [];
+	const newCart = [...cart, game];
 
-	const newCart = [...cartParsed, game];
-
-	clientStorage.setItem(CART_STORAGE_KEY, newCart);
+	updateCart(newCart);
 };
 
 export const deleteCartFromStorage = async (id: number) => {
@@ -31,5 +33,5 @@ export const deleteCartFromStorage = async (id: number) => {
 
 	const newCarts = cart.filter((cart) => cart.id !== id);
 
-	clientStorage.setItem(CART_STORAGE_KEY, newCarts);
+	updateCart(newCarts);
 };

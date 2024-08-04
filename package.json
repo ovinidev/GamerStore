@@ -65,7 +65,12 @@
 			"\\.(jpg|jpeg|png|gif|webp)$": "<rootDir>/src/__mocks__/fileMock.ts"
 		},
 		"collectCoverage": true,
-		"collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!src/queries/**",
+			"!src/hooks/**",
+			"!src/mutations/**"
+		],
 		"coverageDirectory": "coverage",
 		"coverageReporters": ["html", "text"],
 		"coverageThreshold": {

@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Component should match the snapshot when cart is empty 1`] = `
+<View
+  className="flex-1 bg-slate-950 p-6"
+>
+  <Screen
+    options={
+      {
+        "headerRight": [Function],
+        "headerTitle": [Function],
+      }
+    }
+  />
+  <Text
+    className="self-start font-normal text-slate-100 text-xl"
+  >
+    O carrinho de compras está vazio
+  </Text>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View />
+  </RCTScrollView>
+  <View
+    className="mt-4 flex flex-row items-center justify-between bg-primary p-2"
+  >
+    <Text
+      className="font-semibold text-slate-100 text-xl"
+    >
+      Total: R$ 
+      0
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        className="text-center font-bold text-md text-slate-50"
+      >
+        Finalizar compra
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Cart Component should match the snapshot when cart is not empty 1`] = `
+<View
+  className="flex-1 bg-slate-950 p-6"
+>
+  <Screen
+    options={
+      {
+        "headerRight": [Function],
+        "headerTitle": [Function],
+      }
+    }
+  />
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View />
+  </RCTScrollView>
+  <View
+    className="mt-4 flex flex-row items-center justify-between bg-primary p-2"
+  >
+    <Text
+      className="font-semibold text-slate-100 text-xl"
+    >
+      Total: R$ 
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        className="text-center font-bold text-md text-slate-50"
+      >
+        Finalizar compra
+      </Text>
+    </View>
+  </View>
+</View>
+`;
