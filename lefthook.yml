@@ -1,6 +1,5 @@
-
 pre-push:
   commands:
     npm_test:
-      run: npm test
+      run: npx test
 
