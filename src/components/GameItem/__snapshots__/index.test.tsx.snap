@@ -36,6 +36,7 @@ exports[`GameItem should be able to match the snapshot 1`] = `
       "opacity": 1,
     }
   }
+  testID="game-item-touchable"
 >
   <Image
     className="h-[170] w-full"
@@ -84,6 +85,7 @@ exports[`GameItem should be able to match the snapshot 1`] = `
         "opacity": 1,
       }
     }
+    testID="update-cart-button"
   >
     <Text
       className="text-center font-bold text-md text-slate-50"

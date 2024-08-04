@@ -15,9 +15,7 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 	const { addToCart, deleteFromCart } = useCart();
 
 	const handleUpdateCart = () => {
-		if (!data) return;
-
-		isInTheCart ? deleteFromCart(data.id) : addToCart(data);
+		isInTheCart ? deleteFromCart(data?.id) : addToCart(data);
 	};
 
 	return (
@@ -27,6 +25,7 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 			accessibilityLabel={
 				isInTheCart ? "Remover do carrinho" : "Adicionar ao carrinho"
 			}
+			testID="game-item-touchable"
 			onPress={() => handleNavigateToGame({ id: data.id, router })}
 		>
 			<Image
@@ -37,7 +36,7 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 			<Text className="py-2 text-center font-semibold text-md text-slate-50">
 				{data.title}
 			</Text>
-			<Button onPress={handleUpdateCart}>
+			<Button testID="update-cart-button" onPress={handleUpdateCart}>
 				{isInTheCart ? "Remover" : "Adicionar"}
 			</Button>
 		</TouchableOpacity>
