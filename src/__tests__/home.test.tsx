@@ -27,7 +27,7 @@ jest.mock("@hooks/useCart", () => ({
 
 const mockUseGames = useGames as jest.Mock;
 
-describe("Home", () => {
+describe("Home page", () => {
 	it("should match the snapshot", () => {
 		mockUseGames.mockReturnValue({
 			data: GAMES_MOCK,

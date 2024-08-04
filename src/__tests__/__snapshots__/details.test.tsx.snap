@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details page 1`] = `
+<View
+  className="flex flex-1 items-start gap-2 bg-slate-950 px-6"
+>
+  <Screen
+    options={
+      {
+        "headerRight": [Function],
+        "headerTitle": [Function],
+      }
+    }
+  />
+  <Text
+    className="my-2 self-center font-bold text-3xl text-slate-50"
+  >
+    Game Beta
+  </Text>
+  <Image
+    className="h-[300] w-full"
+    resizeMode="cover"
+    source={
+      {
+        "uri": "image-url",
+      }
+    }
+  />
+  <View
+    className="w-full"
+  >
+    <View
+      className="flex flex-row gap-2"
+    >
+      <Text
+        className=" text-slate-100 text-xl"
+      >
+        A thrilling game
+      </Text>
+    </View>
+  </View>
+  <View
+    className="w-full"
+  >
+    <View
+      className="flex flex-row gap-2"
+    >
+      <Text
+        className="font-semibold text-slate-100 text-xl"
+      >
+        Gênero
+        :
+      </Text>
+      <Text
+        className=" text-slate-100 text-xl"
+      >
+        Action
+      </Text>
+    </View>
+  </View>
+  <View
+    className="w-full"
+  >
+    <View
+      className="flex flex-row gap-2"
+    >
+      <Text
+        className="font-semibold text-slate-100 text-xl"
+      >
+        Plataformas
+        :
+      </Text>
+      <Text
+        className=" text-slate-100 text-xl"
+      >
+        PC
+      </Text>
+    </View>
+  </View>
+  <View
+    className="w-full"
+  >
+    <View
+      className="flex flex-row gap-2"
+    >
+      <Text
+        className="font-semibold text-slate-100 text-xl"
+      >
+        Preço
+        :
+      </Text>
+      <Text
+        className=" text-slate-100 text-xl"
+      >
+        R$60
+      </Text>
+    </View>
+  </View>
+  <View
+    className="w-full"
+  >
+    <View
+      className="flex flex-row gap-2"
+    >
+      <Text
+        className="font-semibold text-slate-100 text-xl"
+      >
+        Lançamento
+        :
+      </Text>
+      <Text
+        className=" text-slate-100 text-xl"
+      >
+        31/07/2024
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      className="text-center font-bold text-md text-slate-50"
+    >
+      Adicionar ao carrinho
+    </Text>
+  </View>
+</View>
+`;

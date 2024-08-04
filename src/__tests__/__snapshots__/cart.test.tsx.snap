@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cart Component should match the snapshot when cart is empty 1`] = `
+exports[`Cart page should be able to match the snapshot when cart is empty 1`] = `
 <View
   className="flex-1 bg-slate-950 p-6"
 >
@@ -91,7 +91,7 @@ exports[`Cart Component should match the snapshot when cart is empty 1`] = `
 </View>
 `;
 
-exports[`Cart Component should match the snapshot when cart is not empty 1`] = `
+exports[`Cart page should be able to match the snapshot when cart is not empty 1`] = `
 <View
   className="flex-1 bg-slate-950 p-6"
 >

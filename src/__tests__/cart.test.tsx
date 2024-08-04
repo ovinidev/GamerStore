@@ -20,8 +20,8 @@ jest.mock("@hooks/useCart", () => ({
 	}),
 }));
 
-describe("Cart Component", () => {
-	it("should match the snapshot when cart is not empty", async () => {
+describe("Cart page", () => {
+	it("should be able to match the snapshot when cart is not empty", async () => {
 		(useCart as jest.Mock).mockReturnValue(CART_MOCK);
 
 		const { toJSON } = render(<Cart />);
@@ -29,7 +29,7 @@ describe("Cart Component", () => {
 		expect(toJSON()).toMatchSnapshot();
 	});
 
-	it("should match the snapshot when cart is empty", () => {
+	it("should be able to match the snapshot when cart is empty", () => {
 		(useCart as jest.Mock).mockReturnValue({
 			data: {
 				carts: [],
