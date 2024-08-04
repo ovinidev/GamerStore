@@ -21,7 +21,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 - **@testing-library/react-native**: Biblioteca para testes de componentes React Native.
 - **Biome**: Ferramenta de formatação e linting para código.
 - **Husky**: Ferramenta para criar hooks de Git, permitindo executar scripts antes de commits e pushs.
-- **Lefthook**: Ferramenta para gerenciar hooks de Git, garantindo que os testes sejam executados antes de qualquer push para o repositório remoto.
+- **Lefthook**: Ferramenta para gerenciar hooks de Git, garantindo que os testes e verificação de lint sejam executados antes de qualquer push para o repositório remoto.
 
 ## Funcionalidades
 
