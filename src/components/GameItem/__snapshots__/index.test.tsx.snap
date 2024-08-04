@@ -38,7 +38,7 @@ exports[`GameItem should be able to match the snapshot 1`] = `
   }
 >
   <Image
-    className="h-[165] w-full"
+    className="h-[170] w-full"
     resizeMode="cover"
     source={
       {
