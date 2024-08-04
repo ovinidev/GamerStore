@@ -120,5 +120,5 @@ Context api:
 
 `https://github.com/ovinidev/TailwindIgnite`
 
-Redux:
+Redux toolkit:
 `https://github.com/ovinidev/ReactPlayer`
