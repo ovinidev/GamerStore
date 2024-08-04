@@ -1,4 +1,4 @@
 pre-push:
   commands:
-    echo_test:
-      run: echo "Test hook"
+    npm_test:
+      run: npm jest
