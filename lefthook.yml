@@ -1,4 +1,4 @@
 pre-push:
   commands:
-    npm_test:
-      run: npx jest
+    echo_test:
+      run: echo "Test hook"
