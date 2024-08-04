@@ -111,7 +111,9 @@ Para executar o projeto localmente, siga estes passos:
 
 ### Code coverage:
 
-imagem
+<p align="center">
+  <img height="400px" src="https://i.imgur.com/xt4viSQ.png" />
+</p>
 
 ### Considerações finais:
 
