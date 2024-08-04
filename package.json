@@ -48,13 +48,16 @@
 		"jest": "^29.7.0",
 		"jest-environment-jsdom": "^29.7.0",
 		"jest-expo": "^51.0.3",
+		"lefthook": "^1.7.11",
 		"react-test-renderer": "^18.3.1",
 		"tailwindcss": "^3.4.0",
 		"typescript": "~5.3.3"
 	},
 	"expo": {
 		"install": {
-			"exclude": ["react-native-safe-area-context"]
+			"exclude": [
+				"react-native-safe-area-context"
+			]
 		}
 	},
 	"jest": {
