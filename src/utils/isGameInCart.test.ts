@@ -1,31 +1,31 @@
 import { CART_MOCK } from "@constants/mock";
-import { verifyItemInCart } from "./verifyItemInCart";
+import { isGameInCart } from "./isGameInCart";
 
-describe("verifyItemInCart", () => {
-	const mockedCartWithTotalPrice = { carts: CART_MOCK, totalPrice: 120 };
+describe("isGameInCart", () => {
+	const mockedCartWithTotalPrice = { cart: CART_MOCK, totalPrice: 120 };
 
 	it("should be able to return true with item in cart", () => {
-		const cartItem = verifyItemInCart({
+		const cartItem = isGameInCart({
 			data: mockedCartWithTotalPrice,
-			cartId: 1,
+			gameId: 1,
 		});
 
 		expect(cartItem).toBeTruthy();
 	});
 
 	it("should be able to return false with item not in cart", () => {
-		const cartItem = verifyItemInCart({
+		const cartItem = isGameInCart({
 			data: mockedCartWithTotalPrice,
-			cartId: 999,
+			gameId: 999,
 		});
 
 		expect(cartItem).toBeFalsy();
 	});
 
 	it("should be able to return false when not have data", () => {
-		const cartItem = verifyItemInCart({
+		const cartItem = isGameInCart({
 			data: undefined,
-			cartId: 999,
+			gameId: 999,
 		});
 
 		expect(cartItem).toBeFalsy();

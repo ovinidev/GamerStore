@@ -1,4 +1,4 @@
-import { addToCartFromStorage, deleteCartFromStorage } from "@api/cart";
+import { addGameToStorageCart, deleteCartFromStorage } from "@api/cart";
 import { CARTS } from "@constants/entities";
 import { useToast } from "@hooks/useToast";
 import { Game } from "@interfaces/games";
@@ -9,7 +9,7 @@ export const useAddCart = () => {
 	const { handleShowToastMessage } = useToast();
 
 	return useMutation({
-		mutationFn: (data: Game) => addToCartFromStorage(data),
+		mutationFn: (data: Game) => addGameToStorageCart(data),
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: [CARTS] });
 			handleShowToastMessage({

@@ -3,7 +3,7 @@ import { DetailsItem } from "@components/DetailsItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
 import { useGameById } from "@queries/games";
-import { verifyItemInCart } from "@utils/verifyItemInCart";
+import { isGameInCart } from "@utils/isGameInCart";
 import { useLocalSearchParams } from "expo-router";
 import { Image, Text, View } from "react-native";
 
@@ -13,7 +13,7 @@ export default function Details() {
 	const { data, addToCart, deleteFromCart } = useCart();
 	const { data: game } = useGameById(Number(params.id));
 
-	const isInTheCart = verifyItemInCart({ data, cartId: Number(params.id) });
+	const isInTheCart = isGameInCart({ data, gameId: Number(params.id) });
 
 	const handleUpdateCart = (id: number) => {
 		if (!game) return;

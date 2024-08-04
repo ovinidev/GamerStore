@@ -1,6 +1,6 @@
 import {
 	getCartFromStorage,
-	addToCartFromStorage,
+	addGameToStorageCart,
 	deleteCartFromStorage,
 } from "./cart";
 import { Game } from "@interfaces/games";
@@ -43,11 +43,11 @@ describe("Cart storage", () => {
 		});
 	});
 
-	describe("addToCartFromStorage", () => {
+	describe("addGameToStorageCart", () => {
 		it("should be able to add a new item in the cart", async () => {
 			clientStorageMocked.getItem.mockReturnValue(JSON.stringify([]));
 
-			addToCartFromStorage(GAME_MOCK);
+			addGameToStorageCart(GAME_MOCK);
 
 			expect(clientStorageMocked.setItem).toHaveBeenCalledWith(
 				CART_STORAGE_KEY,
@@ -58,7 +58,7 @@ describe("Cart storage", () => {
 		it("should be able to throw new error when item already exists", async () => {
 			clientStorageMocked.getItem.mockReturnValue(JSON.stringify([GAME_MOCK]));
 
-			expect(addToCartFromStorage(GAME_MOCK)).rejects.toThrow(
+			expect(addGameToStorageCart(GAME_MOCK)).rejects.toThrow(
 				"The game already exist",
 			);
 			expect(clientStorageMocked.setItem).not.toHaveBeenCalled();

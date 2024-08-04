@@ -28,9 +28,9 @@ export const Header = () => {
 							size={24}
 							color="white"
 						/>
-						{data && data.carts.length > 0 && (
+						{data && data.cart.length > 0 && (
 							<Text className="absolute top-[-14px] right-[-5px] font-bold text-md text-slate-100">
-								{data?.carts.length}
+								{data?.cart.length}
 							</Text>
 						)}
 					</View>

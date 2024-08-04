@@ -32,7 +32,7 @@ describe("Cart page", () => {
 	it("should be able to match the snapshot when cart is empty", () => {
 		(useCart as jest.Mock).mockReturnValue({
 			data: {
-				carts: [],
+				cart: [],
 				totalPrice: 0,
 			},
 		});

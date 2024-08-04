@@ -20,7 +20,7 @@ describe("getCartAndCalculateTotalPrice", () => {
 		const cart = getCartAndCalculateTotalPrice();
 
 		expect(cart).toEqual({
-			carts: CART_MOCK,
+			cart: CART_MOCK,
 			totalPrice: 120,
 		});
 	});
@@ -31,7 +31,7 @@ describe("getCartAndCalculateTotalPrice", () => {
 		const result = getCartAndCalculateTotalPrice();
 
 		expect(result).toEqual({
-			carts: [],
+			cart: [],
 			totalPrice: 0,
 		});
 	});

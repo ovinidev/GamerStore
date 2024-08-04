@@ -6,20 +6,20 @@ import { FlatList, Text, View } from "react-native";
 
 export default function Cart() {
 	const { data } = useCart();
-	const isCartEmpty = data?.carts.length === 0;
+	const isEmpty = data?.cart.length === 0;
 
 	return (
 		<View className="flex-1 bg-slate-950 p-6">
 			<Header />
 
-			{isCartEmpty && (
+			{isEmpty && (
 				<Text className="self-start font-normal text-slate-100 text-xl">
 					O carrinho de compras está vazio
 				</Text>
 			)}
 
 			<FlatList
-				data={data?.carts}
+				data={data?.cart}
 				keyExtractor={(item) => item.id.toString()}
 				numColumns={1}
 				renderItem={({ item }) => <CartItem data={item} />}

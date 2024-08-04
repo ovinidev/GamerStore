@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { getGamesByIdFromApi, getGamesFromApi } from "./games";
+import { getGameByIdFromApi, getGamesFromApi } from "./games";
 import { GAMES_MOCK } from "@constants/mock";
 
 jest.mock("axios");
@@ -25,7 +25,7 @@ describe("Games Api", () => {
 	it("should be able to fetch and return the game by ID", async () => {
 		const gameId = GAMES_MOCK[0].id;
 
-		const game = await getGamesByIdFromApi(mockAxiosInstance, gameId);
+		const game = await getGameByIdFromApi(mockAxiosInstance, gameId);
 
 		expect(game).toEqual(GAMES_MOCK[0]);
 	});
@@ -33,8 +33,8 @@ describe("Games Api", () => {
 	it("should be able to take error when game not found", async () => {
 		const gameId = 99;
 
-		await expect(
-			getGamesByIdFromApi(mockAxiosInstance, gameId),
-		).rejects.toThrow("Cart not found");
+		await expect(getGameByIdFromApi(mockAxiosInstance, gameId)).rejects.toThrow(
+			"Game not found",
+		);
 	});
 });

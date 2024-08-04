@@ -12,7 +12,7 @@ export const getGamesFromApi = async (axiosInstance: AxiosInstance) => {
 	return data;
 };
 
-export const getGamesByIdFromApi = async (
+export const getGameByIdFromApi = async (
 	axiosInstance: AxiosInstance,
 	id: number,
 ) => {
@@ -21,7 +21,7 @@ export const getGamesByIdFromApi = async (
 	const gameById = game.find((game) => game.id === id);
 
 	if (!gameById) {
-		throw new Error("Cart not found");
+		throw new Error("Game not found");
 	}
 
 	return gameById;

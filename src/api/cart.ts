@@ -12,7 +12,7 @@ const updateCart = (cart: Game[]) => {
 	clientStorage.setItem(CART_STORAGE_KEY, cart);
 };
 
-export const addToCartFromStorage = async (game: Game) => {
+export const addGameToStorageCart = async (game: Game) => {
 	const cart = getCartFromStorage();
 
 	const gameAlreadyInCart = cart.find((cart) => cart.id === game.id);

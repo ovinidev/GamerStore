@@ -1,8 +1,4 @@
-import {
-	axiosInstance,
-	getGamesByIdFromApi,
-	getGamesFromApi,
-} from "@api/games";
+import { axiosInstance, getGameByIdFromApi, getGamesFromApi } from "@api/games";
 import { GAMES } from "@constants/entities";
 import { useQuery } from "@tanstack/react-query";
 
@@ -16,6 +12,6 @@ export const useGames = () => {
 export const useGameById = (id: number) => {
 	return useQuery({
 		queryKey: [GAMES, { id }],
-		queryFn: () => getGamesByIdFromApi(axiosInstance, id),
+		queryFn: () => getGameByIdFromApi(axiosInstance, id),
 	});
 };

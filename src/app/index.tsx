@@ -2,20 +2,20 @@ import { GameItem } from "@components/GameItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
 import { useGames } from "@queries/games";
-import { verifyItemInCart } from "@utils/verifyItemInCart";
+import { isGameInCart } from "@utils/isGameInCart";
 import { FlatList, Text, View } from "react-native";
 
 export default function Home() {
 	const { data: games } = useGames();
 	const { data } = useCart();
 
-	const isGamesEmpty = games?.length === 0;
+	const isEmpty = games?.length === 0;
 
 	return (
 		<View className="flex flex-1 items-center bg-slate-950">
 			<Header />
 
-			{isGamesEmpty && (
+			{isEmpty && (
 				<Text className="mt-4 font-normal text-slate-100 text-xl">
 					Lista de jogos vazia
 				</Text>
@@ -28,9 +28,9 @@ export default function Home() {
 				renderItem={({ item }) => (
 					<GameItem
 						data={item}
-						isInTheCart={verifyItemInCart({
+						isInTheCart={isGameInCart({
 							data,
-							cartId: item.id,
+							gameId: item.id,
 						})}
 					/>
 				)}
