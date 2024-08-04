@@ -1,5 +1,5 @@
 pre-push:
   commands:
     npm_test:
-      run: npx test
+      run: npx jest
 
