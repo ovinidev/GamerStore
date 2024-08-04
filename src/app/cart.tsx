@@ -1,3 +1,4 @@
+import { Button } from "@components/Button";
 import { CartItem } from "@components/CartItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
@@ -25,10 +26,14 @@ export default function Cart() {
 				ItemSeparatorComponent={() => <View className="h-4" />}
 			/>
 
-			<View className="mt-4 bg-primary p-2">
-				<Text className="self-start font-semibold text-slate-100 text-xl">
+			<View className="mt-4 flex flex-row items-center justify-between bg-primary p-2">
+				<Text className="font-semibold text-slate-100 text-xl">
 					Total: R$ {data?.totalPrice}
 				</Text>
+
+				<Button className="rounded-md bg-secondary p-3">
+					Finalizar compra
+				</Button>
 			</View>
 		</View>
 	);

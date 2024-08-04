@@ -8,6 +8,7 @@ interface VerifyItemInCartProps {
 	cartId: number;
 }
 
+// TODO: TEST
 export const verifyItemInCart = ({ data, cartId }: VerifyItemInCartProps) => {
 	if (data?.carts && data.carts.length > 0) {
 		const cart = data.carts.find((cart) => cart.id === cartId);
