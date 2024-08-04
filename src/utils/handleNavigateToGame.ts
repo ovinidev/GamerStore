@@ -1,11 +1,14 @@
 import { Router } from "expo-router";
 
-interface HandleNavigateProps {
+interface HandleNavigateToGameProps {
 	router: Router;
 	id: number;
 }
 
-export const handleNavigate = ({ router, id }: HandleNavigateProps) => {
+export const handleNavigateToGame = ({
+	router,
+	id,
+}: HandleNavigateToGameProps) => {
 	router.push(`/${id}`);
 	router.setParams({
 		id,

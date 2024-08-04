@@ -1,10 +1,11 @@
-import { render } from "@testing-library/react-native";
+import { fireEvent, render } from "@testing-library/react-native";
 import { Header } from "./index";
+import { useRouter } from "expo-router";
 
 jest.mock("@hooks/useCart", () => ({
 	useCart: jest.fn().mockReturnValue({
 		data: {
-			carts: [],
+			cart: [],
 		},
 	}),
 }));
@@ -14,16 +15,29 @@ jest.mock("expo-router", () => ({
 		push: jest.fn(),
 	}),
 	Stack: {
-		Screen: jest
-			.fn()
-			.mockImplementation(({ options }) => <>{options.headerTitle?.()}</>),
+		Screen: jest.fn().mockImplementation(({ options }) => (
+			<>
+				{options.headerTitle?.()}
+				{options.headerRight?.()}
+			</>
+		)),
 	},
 }));
+const useRouteMocked = useRouter as jest.Mock;
 
 describe("Header", () => {
 	it("should be able to match the snapshot", () => {
 		const { toJSON } = render(<Header />);
 
 		expect(toJSON()).toMatchSnapshot();
+	});
+
+	it("should be able to call router.push when the shopping cart icon is pressed", () => {
+		const { getByTestId } = render(<Header />);
+		const router = useRouteMocked();
+		const cartIcon = getByTestId("cart-button");
+
+		fireEvent.press(cartIcon);
+		expect(router.push).toHaveBeenCalledWith("/cart");
 	});
 });

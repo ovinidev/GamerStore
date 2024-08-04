@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react-native";
 import { CartItem } from "./index";
 import { GAME_MOCK } from "@constants/mock";
-import { handleNavigate } from "@utils/handleNavigate";
+import { handleNavigateToGame } from "@utils/handleNavigateToGame";
 import { useCart } from "@hooks/useCart";
 
 jest.mock("@hooks/useCart", () => ({
@@ -10,8 +10,8 @@ jest.mock("@hooks/useCart", () => ({
 	}),
 }));
 
-jest.mock("@utils/handleNavigate", () => ({
-	handleNavigate: jest.fn(),
+jest.mock("@utils/handleNavigateToGame", () => ({
+	handleNavigateToGame: jest.fn(),
 }));
 
 jest.mock("expo-router", () => ({
@@ -30,13 +30,13 @@ describe("CartItem", () => {
 		expect(toJSON()).toMatchSnapshot();
 	});
 
-	it("should be able to call handleNavigate with correct parameters when pressed", () => {
+	it("should be able to call handleNavigateToGame with correct parameters when pressed", () => {
 		const { getByTestId } = render(<CartItem data={GAME_MOCK} />);
 		const touchableNavigate = getByTestId("cart-item-touchable");
 
 		fireEvent.press(touchableNavigate);
 
-		expect(handleNavigate).toHaveBeenCalledWith({
+		expect(handleNavigateToGame).toHaveBeenCalledWith({
 			id: GAME_MOCK.id,
 			router: expect.any(Object),
 		});

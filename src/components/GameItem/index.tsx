@@ -1,7 +1,7 @@
 import { Button } from "@components/Button";
 import { useCart } from "@hooks/useCart";
 import { Game } from "@interfaces/games";
-import { handleNavigate } from "@utils/handleNavigate";
+import { handleNavigateToGame } from "@utils/handleNavigateToGame";
 import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity } from "react-native";
 
@@ -27,7 +27,7 @@ export const GameItem = ({ data, isInTheCart }: GameItemProps) => {
 			accessibilityLabel={
 				isInTheCart ? "Remover do carrinho" : "Adicionar ao carrinho"
 			}
-			onPress={() => handleNavigate({ id: data.id, router })}
+			onPress={() => handleNavigateToGame({ id: data.id, router })}
 		>
 			<Image
 				className="h-[170] w-full"

@@ -1,7 +1,7 @@
 import Feather from "@expo/vector-icons/Feather";
 import { useCart } from "@hooks/useCart";
 import { Game } from "@interfaces/games";
-import { handleNavigate } from "@utils/handleNavigate";
+import { handleNavigateToGame } from "@utils/handleNavigateToGame";
 import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
@@ -16,7 +16,7 @@ export const CartItem = ({ data }: CartItemProps) => {
 	return (
 		<TouchableOpacity
 			testID="cart-item-touchable"
-			onPress={() => handleNavigate({ id: data.id, router })}
+			onPress={() => handleNavigateToGame({ id: data.id, router })}
 			className="flex w-full flex-row items-center justify-between rounded-md bg-slate-900 p-1"
 		>
 			<View className="flex flex-row items-center gap-3">

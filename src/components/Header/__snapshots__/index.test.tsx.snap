@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should be able to match the snapshot 1`] = `
-<Image
-  resizeMode="contain"
-  source="test-file-stub"
-/>
+[
+  <Image
+    resizeMode="contain"
+    source="test-file-stub"
+  />,
+  <View
+    className="relative flex items-center justify-center"
+  >
+    <Text />
+  </View>,
+]
 `;

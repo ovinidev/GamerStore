@@ -26,10 +26,10 @@ jest.mock("@queries/games", () => ({
 	useGameById: jest.fn(),
 }));
 
-const mockUseGameById = useGameById as jest.Mock;
+const useGameByIdMocked = useGameById as jest.Mock;
 
 test("Details page", () => {
-	mockUseGameById.mockReturnValue({
+	useGameByIdMocked.mockReturnValue({
 		data: GAME_MOCK,
 	});
 

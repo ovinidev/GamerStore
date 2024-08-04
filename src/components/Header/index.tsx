@@ -7,7 +7,7 @@ export const Header = () => {
 	const router = useRouter();
 	const { data } = useCart();
 
-	const handleNavigate = () => {
+	const handleNavigateToCart = () => {
 		router.push("/cart");
 	};
 
@@ -23,7 +23,8 @@ export const Header = () => {
 				headerRight: () => (
 					<View className="relative flex items-center justify-center">
 						<Feather
-							onPress={handleNavigate}
+							testID="cart-button"
+							onPress={handleNavigateToCart}
 							name="shopping-cart"
 							size={24}
 							color="white"

@@ -109,6 +109,10 @@ Para executar o projeto localmente, siga estes passos:
    npm run coverage
    ```
 
+### Code coverage:
+
+imagem
+
 ### Considerações finais:
 
 Não foi preciso utilizar gerenciamento de estados como context api, redux, zusand. Por ser um projeto simples, apenas utilizei o mmkv com react query para gerenciar os dados da aplicação, não precisando de uma biblioteca específica.
