@@ -1,6 +1,6 @@
+import { GAMES_MOCK } from "@constants/mock";
 import axios, { AxiosInstance } from "axios";
 import { getGameByIdFromApi, getGamesFromApi } from "./games";
-import { GAMES_MOCK } from "@constants/mock";
 
 jest.mock("axios");
 

@@ -1,6 +1,6 @@
 import { STALE_TIME } from "@constants/staleTime";
-import { queryClient } from "./queryClient";
 import { QueryClient } from "@tanstack/react-query";
+import { queryClient } from "./queryClient";
 
 describe("Query Client", () => {
 	it("should be able to create an instance of QueryClient", () => {

@@ -1,6 +1,6 @@
 import { fireEvent, render } from "@testing-library/react-native";
-import { Header } from "./index";
 import { useRouter } from "expo-router";
+import { Header } from "./index";
 
 jest.mock("@hooks/useCart", () => ({
 	useCart: jest.fn().mockReturnValue({

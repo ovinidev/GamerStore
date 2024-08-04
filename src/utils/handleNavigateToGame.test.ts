@@ -1,5 +1,5 @@
-import { handleNavigateToGame } from "./handleNavigateToGame";
 import { Router } from "expo-router";
+import { handleNavigateToGame } from "./handleNavigateToGame";
 
 describe("handleNavigateToGame", () => {
 	let mockRouter: Router;

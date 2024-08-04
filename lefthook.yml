@@ -2,3 +2,5 @@ pre-commit:
   commands:
     npm_test:
       run: npx jest
+    lint_check:
+      run: npx @biomejs/biome check --write src

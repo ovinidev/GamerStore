@@ -1,8 +1,8 @@
+import { GAME_MOCK } from "@constants/mock";
+import { useGameById } from "@queries/games";
+import { render } from "@testing-library/react-native";
 import React from "react";
 import Details from "../app/[details]";
-import { render } from "@testing-library/react-native";
-import { useGameById } from "@queries/games";
-import { GAME_MOCK } from "@constants/mock";
 
 jest.mock("expo-router", () => ({
 	Stack: {

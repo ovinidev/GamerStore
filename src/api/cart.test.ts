@@ -1,12 +1,12 @@
-import {
-	getCartFromStorage,
-	addGameToStorageCart,
-	deleteCartFromStorage,
-} from "./cart";
+import { CART_MOCK, GAME_MOCK } from "@constants/mock";
+import { CART_STORAGE_KEY } from "@constants/storageKey";
 import { Game } from "@interfaces/games";
 import { clientStorage } from "@services/mmkv";
-import { CART_STORAGE_KEY } from "@constants/storageKey";
-import { GAME_MOCK, CART_MOCK } from "@constants/mock";
+import {
+	addGameToStorageCart,
+	deleteCartFromStorage,
+	getCartFromStorage,
+} from "./cart";
 
 jest.mock("@services/mmkv");
 

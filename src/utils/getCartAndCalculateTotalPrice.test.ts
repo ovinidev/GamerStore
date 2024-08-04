@@ -1,7 +1,7 @@
-import { getCartAndCalculateTotalPrice } from "./getCartAndCalculateTotalPrice";
 import { getCartFromStorage } from "@api/cart";
-import { clientStorage } from "@services/mmkv";
 import { CART_MOCK } from "@constants/mock";
+import { clientStorage } from "@services/mmkv";
+import { getCartAndCalculateTotalPrice } from "./getCartAndCalculateTotalPrice";
 
 jest.mock("@api/cart");
 jest.mock("@services/mmkv");

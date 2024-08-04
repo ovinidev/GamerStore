@@ -1,8 +1,8 @@
-import { fireEvent, render } from "@testing-library/react-native";
-import { CartItem } from "./index";
 import { GAME_MOCK } from "@constants/mock";
-import { handleNavigateToGame } from "@utils/handleNavigateToGame";
 import { useCart } from "@hooks/useCart";
+import { fireEvent, render } from "@testing-library/react-native";
+import { handleNavigateToGame } from "@utils/handleNavigateToGame";
+import { CartItem } from "./index";
 
 jest.mock("@hooks/useCart", () => ({
 	useCart: jest.fn().mockReturnValue({

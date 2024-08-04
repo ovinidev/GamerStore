@@ -1,5 +1,5 @@
-import { clientStorage, storage } from "./mmkv";
 import { GAME_MOCK } from "@constants/mock";
+import { clientStorage, storage } from "./mmkv";
 
 describe("MMKV", () => {
 	const key = "jest-test-key";

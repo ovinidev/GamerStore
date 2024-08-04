@@ -1,7 +1,7 @@
+import { CART_MOCK } from "@constants/mock";
+import { useCart } from "@hooks/useCart";
 import { render } from "@testing-library/react-native";
 import Cart from "../app/cart";
-import { useCart } from "@hooks/useCart";
-import { CART_MOCK } from "@constants/mock";
 
 jest.mock("expo-router", () => ({
 	Stack: {
