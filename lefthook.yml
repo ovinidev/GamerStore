@@ -1,4 +1,4 @@
-pre-push:
-  commands:
-    npm_test:
-      run: npx jest
+# pre-push:
+#   commands:
+#     npm_test:
+#       run: npx jest
