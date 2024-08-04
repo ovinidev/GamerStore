@@ -1,4 +1,4 @@
 pre-push:
   commands:
     npm_test:
-      run: npm jest
+      run: npm test
