@@ -2,4 +2,3 @@ pre-push:
   commands:
     npm_test:
       run: npx jest
-
