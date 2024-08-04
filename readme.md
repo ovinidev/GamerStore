@@ -27,18 +27,20 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 
 O aplicativo possui as seguintes funcionalidades:
 
-- **Tela Inicial**: 
+- **Tela Inicial**:
+
   - Exibe uma lista de jogos disponíveis na loja.
   - Permite adicionar jogos ao carrinho.
   - Permite remover jogos do carrinho.
   - Os itens estão vindo via API armazenados no GIST.
 
-- **Tela de Detalhes do Jogo**: 
+- **Tela de Detalhes do Jogo**:
+
   - Exibe detalhes completos do jogo selecionado.
   - Permite adicionar o jogo ao carrinho.
   - Permite remover o jogo do carrinho.
 
-- **Tela do Carrinho**: 
+- **Tela do Carrinho**:
   - Exibe todos os jogos adicionados ao carrinho.
   - Mostra o valor total do carrinho.
   - Permite remover itens individuais do carrinho.
@@ -101,11 +103,18 @@ Para executar o projeto localmente, siga estes passos:
    npm test
    ```
 
+   Para coletar o code coverage:
+
+   ```bash
+   npm run coverage
+   ```
+
 ### Considerações finais:
 
 Não foi preciso utilizar gerenciamento de estados como context api, redux, zusand. Por ser um projeto simples, apenas utilizei o mmkv com react query para gerenciar os dados da aplicação, não precisando de uma biblioteca específica.
 
 #### Projetos onde utilizei:
+
 Context api:
 `https://github.com/ovinidev/ChartsView`
 

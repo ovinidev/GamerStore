@@ -35,4 +35,12 @@ describe("getCartAndCalculateTotalPrice", () => {
 			totalPrice: 0,
 		});
 	});
+
+	it("should be able to return error with carts not is array", () => {
+		mockGetCartFromStorage.mockReturnValue(undefined);
+
+		expect(() => getCartAndCalculateTotalPrice()).toThrow(
+			"Expected carts to be an array",
+		);
+	});
 });

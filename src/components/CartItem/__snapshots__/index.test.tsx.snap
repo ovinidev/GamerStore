@@ -34,6 +34,7 @@ exports[`CartItem should be able to match the snapshot 1`] = `
       "opacity": 1,
     }
   }
+  testID="cart-item-touchable"
 >
   <View
     className="flex flex-row items-center gap-3"
@@ -69,6 +70,7 @@ exports[`CartItem should be able to match the snapshot 1`] = `
     name="trash"
     onPress={[Function]}
     size={24}
+    testID="cart-item-delete-icon"
   />
 </View>
 `;

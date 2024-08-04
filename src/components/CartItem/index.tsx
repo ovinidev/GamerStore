@@ -15,6 +15,7 @@ export const CartItem = ({ data }: CartItemProps) => {
 
 	return (
 		<TouchableOpacity
+			testID="cart-item-touchable"
 			onPress={() => handleNavigate({ id: data.id, router })}
 			className="flex w-full flex-row items-center justify-between rounded-md bg-slate-900 p-1"
 		>
@@ -31,6 +32,7 @@ export const CartItem = ({ data }: CartItemProps) => {
 			</View>
 
 			<Feather
+				testID="cart-item-delete-icon"
 				onPress={() => deleteFromCart(data.id)}
 				name="trash"
 				size={24}

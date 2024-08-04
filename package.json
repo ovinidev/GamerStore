@@ -9,7 +9,8 @@
 		"prebuild": "expo prebuild",
 		"format": "@biomejs/biome format --write src",
 		"web": "expo start --web",
-		"test": "jest"
+		"test": "jest",
+		"coverage": "jest --coverage"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^14.0.0",
@@ -55,15 +56,25 @@
 	},
 	"expo": {
 		"install": {
-			"exclude": [
-				"react-native-safe-area-context"
-			]
+			"exclude": ["react-native-safe-area-context"]
 		}
 	},
 	"jest": {
 		"preset": "jest-expo",
 		"moduleNameMapper": {
 			"\\.(jpg|jpeg|png|gif|webp)$": "<rootDir>/src/__mocks__/fileMock.ts"
+		},
+		"collectCoverage": true,
+		"collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+		"coverageDirectory": "coverage",
+		"coverageReporters": ["html", "text"],
+		"coverageThreshold": {
+			"global": {
+				"branches": 80,
+				"functions": 80,
+				"lines": 80,
+				"statements": 80
+			}
 		}
 	},
 	"private": true
