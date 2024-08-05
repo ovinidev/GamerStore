@@ -1,4 +1,4 @@
-# Game Store
+# Gamer Store
 
 Este é um app de venda de jogos digitais, desenvolvido com Expo e React Native. O aplicativo permite que os usuários naveguem por uma lista de jogos, adicionem ou removam itens do carrinho e visualizem o valor total do carrinho.
 
