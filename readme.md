@@ -62,13 +62,13 @@ Para executar o projeto localmente, siga estes passos:
 1. **Clone o Repositório**
 
    ```bash
-   https://github.com/ovinidev/GameStore.git
+   https://github.com/ovinidev/GamerStore.git
    ```
 
 2. **Navegue para o Diretório do Projeto**
 
    ```bash
-   cd GameStore
+   cd GamerStore
    ```
 
 3. **Instale as Dependências**
