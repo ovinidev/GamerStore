@@ -1,4 +1,3 @@
-import { Button } from "@components/Button";
 import { CartItem } from "@components/CartItem";
 import { Header } from "@components/Header";
 import { useCart } from "@hooks/useCart";
@@ -30,10 +29,6 @@ export default function Cart() {
 				<Text className="font-semibold text-slate-100 text-xl">
 					Total: R$ {data?.totalPrice}
 				</Text>
-
-				<Button className="rounded-md bg-secondary p-3">
-					Finalizar compra
-				</Button>
 			</View>
 		</View>
 	);
