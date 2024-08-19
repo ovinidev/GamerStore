@@ -3,9 +3,9 @@ import { Game } from "@interfaces/games";
 import { clientStorage } from "@services/mmkv";
 
 export const getCartFromStorage = (): Game[] => {
-	const cart = clientStorage.getItem(CART_STORAGE_KEY);
+	const cart = clientStorage.getItem<string>(CART_STORAGE_KEY);
 
-	return cart ? (JSON.parse(cart) as unknown as Game[]) : [];
+	return cart ? JSON.parse(cart) : [];
 };
 
 const updateCart = (cart: Game[]) => {

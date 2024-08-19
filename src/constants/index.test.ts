@@ -77,7 +77,7 @@ describe("Constants", () => {
 
 	test("STALE_TIME should be correct", () => {
 		const TEN_SECONDS = 10 * 1000;
-		expect(STALE_TIME).toBe(1000 * TEN_SECONDS);
+		expect(STALE_TIME).toBe(TEN_SECONDS);
 	});
 
 	test('CART_STORAGE_KEY should be "@cart"', () => {

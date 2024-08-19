@@ -3,8 +3,8 @@ import { useGetCart } from "@queries/cart";
 
 export const useCart = () => {
 	const { data } = useGetCart();
-	const { mutateAsync: addToCart } = useAddCart();
-	const { mutateAsync: deleteFromCart } = useDeleteCart();
+	const { mutate: addToCart } = useAddCart();
+	const { mutate: deleteFromCart } = useDeleteCart();
 
 	return {
 		addToCart,

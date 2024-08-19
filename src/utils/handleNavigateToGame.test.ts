@@ -15,7 +15,7 @@ describe("handleNavigateToGame", () => {
 		const id = 123;
 		handleNavigateToGame({ router: mockRouter, id });
 
-		expect(mockRouter.push).toHaveBeenCalledWith(`/${id}`);
+		expect(mockRouter.push).toHaveBeenCalledWith("/details");
 		expect(mockRouter.setParams).toHaveBeenCalledWith({ id });
 	});
 });

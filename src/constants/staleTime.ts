@@ -1,2 +1,2 @@
-const TEN_SECONDS = 10 * 1000;
-export const STALE_TIME = 1000 * TEN_SECONDS;
+const TEN_SECONDS_IN_MS = 10 * 1000;
+export const STALE_TIME = TEN_SECONDS_IN_MS;

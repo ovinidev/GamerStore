@@ -9,7 +9,7 @@ export const handleNavigateToGame = ({
 	router,
 	id,
 }: HandleNavigateToGameProps) => {
-	router.push(`/${id}`);
+	router.push("/details");
 	router.setParams({
 		id,
 	});

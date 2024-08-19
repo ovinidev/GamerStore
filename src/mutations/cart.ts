@@ -14,7 +14,7 @@ export const useAddCart = () => {
 			queryClient.invalidateQueries({ queryKey: [CARTS] });
 			handleShowToastMessage({
 				type: "success",
-				text: "Item adicionado ao carrinho som sucesso",
+				text: "Item adicionado ao carrinho com sucesso",
 			});
 		},
 		onError: () => {
